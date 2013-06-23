@@ -1,10 +1,15 @@
+/*! \file sort_test.cpp
+    \brief Sort Test Program
+    \author J. Caleb Wherry
+*/
+
 /////////////////////////////
 //
-//  @file sort_test.cpp
+//  \file sort_test.cpp
 //
-//  @brief Sort Test Program
+//  \brief Sort Test Program
 //
-//  @author J. Caleb Wherry
+//  \author J. Caleb Wherry
 //
 /////////////////////////////
 
