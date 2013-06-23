@@ -1,4 +1,4 @@
 Cpp-Libraries
 ===================
 
-C++ Libraries for Sorting, Searching, & and Data Structures.
+C++ Libraries for Sorting, Searching, & Data Structures.
