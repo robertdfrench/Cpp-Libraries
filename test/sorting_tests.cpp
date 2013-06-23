@@ -1,13 +1,10 @@
 /////////////////////////////
 //
-//  File:
-//      sort_test.cpp
+//  @file sort_test.cpp
 //
-//  Description:
-//      Sort Test Program
+//  @brief Sort Test Program
 //
-//  Author:
-//      J. Caleb Wherry
+//  @author J. Caleb Wherry
 //
 /////////////////////////////
 

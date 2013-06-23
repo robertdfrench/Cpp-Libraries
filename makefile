@@ -15,8 +15,12 @@ all:
 	$(MAKE) -C lib
 	$(MAKE) -C test
 
-.PHONY: clean
+.PHONY: docs clean
+
+doc:
+	doxygen
 
 clean:
+	rm -rf html
 	$(MAKE) -C lib clean
 	$(MAKE) -C test clean
