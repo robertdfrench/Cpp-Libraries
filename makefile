@@ -4,7 +4,7 @@
 ##      makefile
 ##
 ##  Description:
-##      Top-level makefile for C++ Sort Library
+##      Top-level makefile for C++ Libraries
 ##
 ##  Author:
 ##      J. Caleb Wherry

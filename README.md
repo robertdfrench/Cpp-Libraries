@@ -1,4 +1,4 @@
-Cpp-Sorting-Library
+Cpp-Libraries
 ===================
 
-C++ Library for Sorting Algorithms
+C++ Libraries for Sorting, Searching, & and Data Structures.
