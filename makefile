@@ -1,2 +1,22 @@
+#############################
+##
+##  File:
+##      makefile
+##
+##  Description:
+##      Top-level makefile for C++ Sort Library
+##
+##  Author:
+##      J. Caleb Wherry
+##
+#############################
+
 all:
-	g++ --std=c++0x test/main_test.cpp lib/sort.h lib/sort.cpp -o sort
+	$(MAKE) -C lib
+	$(MAKE) -C test
+
+.PHONY: clean
+
+clean:
+	$(MAKE) -C lib clean
+	$(MAKE) -C test clean

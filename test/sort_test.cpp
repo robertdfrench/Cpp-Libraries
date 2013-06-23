@@ -1,7 +1,7 @@
 /////////////////////////////
 //
 //  File:
-//      main_test.cpp
+//      sort_test.cpp
 //
 //  Description:
 //      Sort Test Program
