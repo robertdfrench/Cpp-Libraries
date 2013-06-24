@@ -11,20 +11,14 @@
 ##
 #############################
 
-include ../common-lib-rules.mk
+#include $(realpath ../makefile-lib.common)
+include /home/calebwherry/Downloads/repos_github/Cpp-Libraries/lib/makefile-lib.common
 
-# source files.
 SRC =  sorting.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
 OUT = libsorting.a
-
-# include directories
-INCLUDES = -I. -I../include/ -I/usr/local/include
-
-# library paths
-LIBS = -L../ -L/usr/local/lib -lm
 
 .SUFFIXES: .cpp
 

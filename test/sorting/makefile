@@ -11,6 +11,7 @@
 ##
 #############################
 
+#include $(realpath ../makefile-test.common)
 include /home/calebwherry/Downloads/repos_github/Cpp-Libraries/test/makefile-test.common
 
 # define library paths in addition to /usr/lib
@@ -21,7 +22,7 @@ LFLAGS += -L../../lib/sorting
 # define any libraries to link into executable:
 #   if I want to link in libraries (libx.so or libx.a) I use the -llibname 
 #   option, something like (this will link in libmylib.so and libm.so:
-LIBS = -lm
+LIBS = -lm -lsorting
 
 # define the C source files
 SRCS = tests.cpp

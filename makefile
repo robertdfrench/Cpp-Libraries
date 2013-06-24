@@ -12,7 +12,7 @@
 #############################
 
 # Include all common make rules:
-include makefile.common
+include $(realpath makefile.common)
 
 .PHONY: all lib test doc clean
 

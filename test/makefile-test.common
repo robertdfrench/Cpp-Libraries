@@ -11,4 +11,5 @@
 ##
 #############################
 
+#include $(realpath ../makefile.common)
 include /home/calebwherry/Downloads/repos_github/Cpp-Libraries/makefile.common
