@@ -1,0 +1,14 @@
+#############################
+##
+##  File:
+##      common-rules.mk
+##
+##  Description:
+##      Top-level common make rules for C++ Libraries
+##
+##  Author:
+##      J. Caleb Wherry
+##
+#############################
+
+include /home/calebwherry/Downloads/repos_github/Cpp-Libraries/makefile.common

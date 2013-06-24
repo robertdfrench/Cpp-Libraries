@@ -1,0 +1,35 @@
+#############################
+##
+##  File:
+##      common-rules.mk
+##
+##  Description:
+##      Top-level common make rules for C++ Libraries
+##
+##  Author:
+##      J. Caleb Wherry
+##
+#############################
+
+# Top-level directories:
+TOP  := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+SRC  := src
+BIN  := bin
+TEST := test
+LIB  := lib
+DOC  := doc
+
+# Doxyfile:
+DOXYFILE := $(DOC)/DoxyFile
+
+# Compiler:
+CC := g++
+
+# Compile-time flags:
+CFLAGS := -Wall -g -O2 -std=c++0x
+
+# Directories containing header files other than /usr/include:
+INCLUDES = -I/usr/local/include -Iinclude
+
+# Library paths in addition to /usr/lib
+LFLAGS = -L/usr/local/lib -L../lib -L../lib/sorting

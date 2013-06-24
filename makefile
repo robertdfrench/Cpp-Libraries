@@ -11,16 +11,23 @@
 ##
 #############################
 
-all:
+# Include all common make rules:
+include makefile.common
+
+.PHONY: all lib test doc clean
+
+all: lib test
+
+lib:
 	$(MAKE) -C lib
+
+test:
 	$(MAKE) -C test
 
-.PHONY: docs clean
-
 doc:
-	doxygen
+	doxygen $(DOXYFILE)
 
 clean:
-	rm -rf html
+	rm -rf $(DOC)/html
 	$(MAKE) -C lib clean
 	$(MAKE) -C test clean
