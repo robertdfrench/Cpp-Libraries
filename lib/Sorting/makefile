@@ -14,7 +14,7 @@
 #include $(realpath ../makefile-lib.common)
 include /home/calebwherry/Downloads/repos_github/Cpp-Libraries/lib/makefile-lib.common
 
-SRC =  sorting.cpp
+SRC = Sorting.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

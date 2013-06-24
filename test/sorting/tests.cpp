@@ -17,7 +17,7 @@
 #include <vector>
 
 // Local Includes:
-#include "../../lib/sorting/sorting.h"
+#include "../../lib/Sorting/Sorting.h"
 
 // Namespaces:
 using namespace std;

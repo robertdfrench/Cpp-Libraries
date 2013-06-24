@@ -17,12 +17,12 @@ include /home/calebwherry/Downloads/repos_github/Cpp-Libraries/test/makefile-tes
 # define library paths in addition to /usr/lib
 #   if I wanted to include libraries not in /usr/lib I\'d specify
 #   their path using -Lpath, something like:
-LFLAGS += -L../../lib/sorting
+LFLAGS += -L../../lib/Sorting
 
 # define any libraries to link into executable:
 #   if I want to link in libraries (libx.so or libx.a) I use the -llibname 
 #   option, something like (this will link in libmylib.so and libm.so:
-LIBS = -lm -lsorting
+LIBS += -lm -lsorting
 
 # define the C source files
 SRCS = tests.cpp
