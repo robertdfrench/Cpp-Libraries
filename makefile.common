@@ -13,14 +13,14 @@
 
 # Top-level directories:
 TOP_DIR  := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
-SRC_DIR  := src
-BIN_DIR  := bin
-TEST_DIR := test
-LIB_DIR  := lib
-DOC_DIR  := doc
+SRC_DIR  := $(TOP_DIR)/src
+BIN_DIR  := $(TOP_DIR)/bin
+TEST_DIR := $(TOP_DIR)/test
+LIB_DIR  := $(TOP_DIR)/lib
+DOC_DIR  := $(TOP_DIR)/doc
 
 # Doxyfile:
-DOXYFILE := $(DOC)/DoxyFile
+DOXYFILE := $(DOC_DIR)/Doxyfile
 
 # Compiler:
 CC := g++

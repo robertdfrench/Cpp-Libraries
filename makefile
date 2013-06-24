@@ -12,7 +12,8 @@
 #############################
 
 # Include all common make rules:
-include $(realpath makefile.common)
+#include $(realpath makefile.common)
+include makefile.common
 
 .PHONY: all lib test doc clean
 
@@ -28,6 +29,6 @@ doc:
 	doxygen $(DOXYFILE)
 
 clean:
-	rm -rf $(DOC)/html
+	rm -rf $(DOC_DIR)/html
 	$(MAKE) -C lib clean
 	$(MAKE) -C test clean
