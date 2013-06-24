@@ -13,3 +13,18 @@
 
 #include $(realpath ../makefile.common)
 include /home/calebwherry/Downloads/repos_github/Cpp-Libraries/makefile.common
+
+.PHONY: clean
+
+default: $(PROG)
+
+OBJS = $(SRC:.cpp=.o)
+
+$(PROG): $(OBJS)
+	$(CC) $(CFLAGS) $(INCLUDES) -o $(PROG) $(OBJS) $(LFLAGS) $(LIBS)
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) $(INCLUDES) -c $<  -o $@
+
+clean:
+	$(RM) *.o *~ $(PROG)

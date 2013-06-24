@@ -29,7 +29,7 @@ CC := g++
 CFLAGS := -Wall -g -O2 -std=c++0x
 
 # Directories containing header files other than /usr/include:
-INCLUDES = -I/usr/local/include -Iinclude
+INCLUDES += -I/usr/local/include -Iinclude
 
 # Library paths in addition to /usr/lib
-LFLAGS = -L/usr/local/lib -L$(LIB_DIR)
+LFLAGS += -L/usr/local/lib -L$(LIB_DIR)

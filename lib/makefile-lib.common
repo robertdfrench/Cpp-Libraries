@@ -13,3 +13,16 @@
 
 #include $(realpath ../makefile.common)
 include /home/calebwherry/Downloads/repos_github/Cpp-Libraries/makefile.common
+
+OBJS = $(SRC:.cpp=.o)
+
+default: $(LIB)
+
+%.o: %.cpp
+	$(CC) $(INCLUDES) $(CFLAGS) -c $< -o $@
+
+$(LIB): $(OBJS)
+	ar rcs $(LIB) $(OBJS)
+
+clean:
+	rm -f $(OBJS) $(LIB) Makefile.bak makefile.bak
