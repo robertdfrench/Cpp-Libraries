@@ -1,18 +1,18 @@
 #############################
 ##
 ##  File:
-##      common-rules.mk
+##      \file makefile-test.common
 ##
 ##  Description:
-##      Top-level common make rules for C++ Libraries
+##      \brief Test common make rules for C++ Libraries
 ##
 ##  Author:
-##      J. Caleb Wherry
+##      \author J. Caleb Wherry
 ##
 #############################
 
-#include $(realpath ../makefile.common)
-include /home/calebwherry/Downloads/repos_github/Cpp-Libraries/makefile.common
+# Double directoy up because this path is expanded when it is included (which is a directory down):
+include $(abspath ../../makefile.common)
 
 .PHONY: clean
 
@@ -22,6 +22,7 @@ OBJS = $(SRC:.cpp=.o)
 
 $(PROG): $(OBJS)
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(PROG) $(OBJS) $(LFLAGS) $(LIBS)
+	@cp $(PROG) $(BIN_DIR)
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) $(INCLUDES) -c $<  -o $@

@@ -1,18 +1,17 @@
 #############################
 ##
 ##  File:
-##      makefile
+##      \file makefile
 ##
 ##  Description:
-##      Sorting library makefile for C++ Libraries
+##      \brief Sorting library makefile for C++ Libraries
 ##
 ##  Author:
-##      J. Caleb Wherry
+##      \author J. Caleb Wherry
 ##
 #############################
 
 SRC = Sorting.cpp
 LIB = libsorting.a
 
-#include $(realpath ../makefile-lib.common)
-include /home/calebwherry/Downloads/repos_github/Cpp-Libraries/lib/makefile-lib.common
+include $(abspath ../makefile-lib.common)

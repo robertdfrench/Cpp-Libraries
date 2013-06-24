@@ -1,13 +1,13 @@
 #############################
 ##
 ##  File:
-##      makefile
+##      \file makefile
 ##
 ##  Description:
-##      Library-level makefile for C++ Libraries
+##      \brief Library-level makefile for C++ Libraries
 ##
 ##  Author:
-##      J. Caleb Wherry
+##      \author J. Caleb Wherry
 ##
 #############################
 

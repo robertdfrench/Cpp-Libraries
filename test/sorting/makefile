@@ -1,13 +1,13 @@
 #############################
 ##
 ##  File:
-##      makefile
+##      \file makefile
 ##
 ##  Description:
-##      Sorting tests makefile for C++ Libraries
+##      \brief Sorting tests makefile for C++ Libraries
 ##
 ##  Author:
-##      J. Caleb Wherry
+##      \author J. Caleb Wherry
 ##
 #############################
 
@@ -16,5 +16,4 @@ SRC = tests.cpp
 LFLAGS += -L../../lib/Sorting
 LIBS += -lm -lsorting
 
-#include $(realpath ../makefile-test.common)
-include /home/calebwherry/Downloads/repos_github/Cpp-Libraries/test/makefile-test.common
+include $(abspath ../makefile-test.common)

@@ -1,18 +1,18 @@
 #############################
 ##
 ##  File:
-##      makefile-lib.common
+##      \file makefile-lib.common
 ##
 ##  Description:
-##      Library-level common make rules for C++ Libraries
+##      \brief Library-level common make rules for C++ Libraries
 ##
 ##  Author:
-##      J. Caleb Wherry
+##      \author J. Caleb Wherry
 ##
 #############################
 
-#include $(realpath ../makefile.common)
-include /home/calebwherry/Downloads/repos_github/Cpp-Libraries/makefile.common
+# Double directoy up because this path is expanded when it is included (which is a directory down):
+include $(abspath ../../makefile.common)
 
 OBJS = $(SRC:.cpp=.o)
 
@@ -23,6 +23,7 @@ default: $(LIB)
 
 $(LIB): $(OBJS)
 	ar rcs $(LIB) $(OBJS)
+	@cp $(LIB) $(BIN_DIR)
 
 clean:
 	rm -f $(OBJS) $(LIB) Makefile.bak makefile.bak

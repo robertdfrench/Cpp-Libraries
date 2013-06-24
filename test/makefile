@@ -1,13 +1,13 @@
 #############################
 ##
 ##  File:
-##      makefile
+##      \file makefile
 ##
 ##  Description:
-##      Test-level makefile for C++ Libraries
+##      \brief Test-level makefile for C++ Libraries
 ##
 ##  Author:
-##      J. Caleb Wherry
+##      \author J. Caleb Wherry
 ##
 #############################
 

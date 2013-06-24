@@ -1,23 +1,26 @@
 #############################
 ##
 ##  File:
-##      makefile
+##      \file makefile
 ##
 ##  Description:
-##      Top-level makefile for C++ Libraries
+##      \brief Top-level makefile for C++ Libraries
 ##
 ##  Author:
-##      J. Caleb Wherry
+##      \author J. Caleb Wherry
 ##
 #############################
 
 # Include all common make rules:
-#include $(realpath makefile.common)
 include makefile.common
 
-.PHONY: all lib test doc clean
+# Phony targets:
+.PHONY: default lib test doc clean distclean
 
-all: lib test
+default: dirs lib test
+
+dirs:
+	@mkdir $(BIN_DIR)
 
 lib:
 	$(MAKE) -C lib
@@ -29,6 +32,9 @@ doc:
 	doxygen $(DOXYFILE)
 
 clean:
-	rm -rf $(DOC_DIR)/html
 	$(MAKE) -C lib clean
 	$(MAKE) -C test clean
+
+distclean: clean
+	rm -rf $(BIN_DIR)
+	rm -rf $(DOC_DIR)/html

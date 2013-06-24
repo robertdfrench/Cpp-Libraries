@@ -1,15 +1,13 @@
-/*! \file sort_test.cpp
-    \brief Sort Test Program
-    \author J. Caleb Wherry
-*/
-
 /////////////////////////////
 //
-//  \file sort_test.cpp
+//  File:
+//      \file sort_test.cpp
 //
-//  \brief Sort Test Program
+//  Description:
+//      \brief Sort Test Program
 //
-//  \author J. Caleb Wherry
+//  Author:
+//      \author J. Caleb Wherry
 //
 /////////////////////////////
 
