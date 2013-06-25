@@ -32,7 +32,7 @@ class Sort {
 	public:
         Sort(std::vector<int> inList);
 
-		void bogoSort();
+		int bogoSort();
         void print();
 };
 
