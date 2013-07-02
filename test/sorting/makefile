@@ -12,8 +12,8 @@
 #############################
 
 PROG = sorting_tests
-SRC = tests.cpp
+SRCS = tests.cpp
 LFLAGS += -L../../lib/Sorting
-LIBS += -lm -lsorting
+LIBS += -lsorting
 
 include $(abspath ../makefile-test.common)

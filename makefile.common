@@ -26,10 +26,13 @@ DOXYFILE := $(DOC_DIR)/Doxyfile
 CC := g++
 
 # Compile-time flags:
-CFLAGS := -Wall -g -O2 -std=c++0x
+CFLAGS := -Wall -g -O2 -std=c++0x -I$(LIB_DIR)
 
 # Directories containing header files other than /usr/include:
 INCLUDES += -I/usr/local/include -Iinclude
 
 # Library paths in addition to /usr/lib
 LFLAGS += -L/usr/local/lib -L$(LIB_DIR)
+
+# Delete tool:
+RM := /bin/rm -f

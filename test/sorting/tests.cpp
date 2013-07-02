@@ -17,7 +17,7 @@
 #include <stdlib.h>
 
 // Local Includes:
-#include "../../lib/Sorting/Sorting.h"
+#include "Sorting/Sorting.h"
 
 // Namespaces:
 using namespace std;

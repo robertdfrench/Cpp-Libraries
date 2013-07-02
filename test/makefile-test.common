@@ -18,14 +18,17 @@ include $(abspath ../../makefile.common)
 
 default: $(PROG)
 
-OBJS = $(SRC:.cpp=.o)
+OBJS = $(SRCS:.cpp=.o)
 
 $(PROG): $(OBJS)
-	$(CC) $(CFLAGS) $(INCLUDES) -o $(PROG) $(OBJS) $(LFLAGS) $(LIBS)
+	$(CC) -- $(CFLAGS) $(INCLUDES) -o $(PROG) $(OBJS) $(LFLAGS) $(LIBS)
 	@cp $(PROG) $(BIN_DIR)
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) $(INCLUDES) -c $<  -o $@
+	$(CC) -- $(CFLAGS) $(INCLUDES) -c $<  -o $@
 
 clean:
 	$(RM) *.o *~ $(PROG)
+
+depend:
+	makedepend -- $(CFLAGS) -- $(SRCS)
