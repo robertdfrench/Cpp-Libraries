@@ -17,7 +17,7 @@
 #include <stdlib.h>
 
 // Local Includes:
-#include "Sorting/Sorting.h"
+#include "Sorting/BogoSort.h"
 
 // Namespaces:
 using namespace std;
@@ -40,20 +40,20 @@ int main()
         testList.push_back(rand() % 100);
 
     // Create first Sort object:
-    Sort* mySort = new Sort(testList);
+    BogoSort* bogoSort = new BogoSort(testList);
 
     // Print the list at first:
     cout << endl << "Unsorted List: ";
-    mySort->print();
+    bogoSort->print();
 
     cout << endl << "Testing Bogo Sort..." << endl;
 
     // Bogo sort that shit:
-    int numIterations = mySort->bogoSort();
+    int numIterations = bogoSort->sort();
 
     // Print it:
     cout << "\tSorted List: ";
-    mySort->print();
+    bogoSort->print();
 
     // Other stuff:
     cout << "\tNumber of shuffles: " << numIterations << endl;
@@ -64,5 +64,12 @@ int main()
 
 int factorial (int x, int result)
 {
-    if (x == 1) return result; else return factorial(x-1,x*result);
+    if (x == 1) 
+    {
+        return result;
+    }
+    else 
+    {
+        return factorial( x-1, x*result );
+    }
 }

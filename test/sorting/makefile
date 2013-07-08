@@ -13,7 +13,7 @@
 
 PROG = sorting_tests
 SRCS = tests.cpp
-LFLAGS += -L../../lib/Sorting
+LFLAGS += -L${ROOT_DIR}/lib/Sorting
 LIBS += -lsorting
 
 include $(abspath ../makefile-test.common)

@@ -1,29 +1,31 @@
 /////////////////////////////
 //
 //  File:
-//	    sort.cpp
+//	    BogoSort.cpp
 //
 //  Description:
-//	    Sort Algorithms: Implementation
+//	    Bogo Sort: Implementation
 //
 //  Author:
 //	    J. Caleb Wherry
 //
 /////////////////////////////
 
-// Include Dependencies:
-#include "Sorting.h"
+// Local Include Dependencies:
+#include "BogoSort.h"
+
+// Compiler Include Dependencies:
 #include <iostream>
 #include <algorithm>
 #include <stdlib.h>
 
 // Definitions:
-Sort::Sort(std::vector<int> inList)
+BogoSort::BogoSort(std::vector<int> inList)
 {
     list = inList;
 };
 
-int Sort::bogoSort()
+int BogoSort::sort()
 {
     int numIterations = 0;
 
@@ -39,7 +41,7 @@ int Sort::bogoSort()
     return numIterations;
 };
 
-void Sort::print()
+void BogoSort::print()
 {
     for(auto &i : list)
     {

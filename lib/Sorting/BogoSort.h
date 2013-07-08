@@ -1,10 +1,10 @@
 /////////////////////////////
 //
 //  File:
-//      sort.h
+//     BogoSort.h
 //
 //  Description:
-//      Sort Algorithms: Header
+//      Bogo Sort: Header
 //
 //  Author:
 //      J. Caleb Wherry
@@ -12,28 +12,31 @@
 /////////////////////////////
 
 // Include Guard:
-#ifndef SORT_H
-#define SORT_H
+#ifndef BOGO_SORT_H
+#define BOGO_SORT_H
 
 // Forward Declared Dependencies:
 //
 
-// Include Dependencies:
+// Local Include Dependencies:
+//
+
+// Compiler Include Dependencies:
 #include <vector>
 
 // Definitions:
-class Sort {
+class BogoSort {
 
 	private:
 		std::vector<int> list;
 
-        Sort() { }
+        BogoSort() { }
 
 	public:
-        Sort(std::vector<int> inList);
+        BogoSort(std::vector<int> inList);
 
-		int bogoSort();
+		int sort();
         void print();
 };
 
-#endif // SORT_H
+#endif // BOGO_SORT_H

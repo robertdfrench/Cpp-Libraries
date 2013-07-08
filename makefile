@@ -14,20 +14,28 @@
 # Include all common make rules:
 include makefile.common
 
-# Phony targets:
-.PHONY: default lib test doc clean
+# Doxyfile:
+DOXYFILE = ${DOC_DIR}/DoxyFile
 
+# Phony targets
+.PHONY: default dirs lib test doc clean
+
+# Default rule:
 default: dirs lib test
 
+# Lets make some directories:
 dirs:
 	@mkdir -p $(BIN_DIR)
 
+# Compile all libs:
 lib:
 	$(MAKE) -C lib
 
+# Compile all tests:
 test:
 	$(MAKE) -C test
 
+# Create documentation:
 doc:
 	doxygen $(DOXYFILE)
 

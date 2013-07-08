@@ -11,12 +11,10 @@
 ##
 #############################
 
-all:
+default:
 	$(MAKE) -C sorting
 #	$(MAKE) -C searching
 #	$(MAKE) -C data_structures
-
-.PHONY: clean
 
 clean:
 	$(MAKE) -C sorting clean

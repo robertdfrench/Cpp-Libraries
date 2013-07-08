@@ -1,7 +1,28 @@
-// J. Caleb Wherry
-// Doubly-Linked List Implementation
-// Created: 12/23/2010
-// Last Modified: 12/23/2010
+/////////////////////////////
+//
+//  File:
+//      \file DoublyLinkedList.h
+//
+//  Description:
+//      \brief Doubly Linked List: Header
+//
+//  Author:
+//      \author J. Caleb Wherry
+//
+/////////////////////////////
+
+// Include Guards:
+#ifndef DOUBLY_LINKED_LIST_H
+#define DOUBLY_LINKED_LIST_H
+
+// Forward Declared Dependencies:
+//
+
+// Local Include Dependencies:
+//
+
+// Compiler Include Dependencies:
+//
 
 template <typename T>
 struct Node {
@@ -20,75 +41,18 @@ class DoublyLinkedList {
 
 	public:
 
-		DoublyLinkedList() {
+		DoublyLinkedList();
 
-			head = NULL;
-			size = 0;
+		void pushBack(T data);
 
-		}
+		void pushFront(T data);
 
-		void pushBack(T data) {
+		void popBack(T data);
 
-			Node<T> *newNode = new Node<T>();
-			newNode->next = NULL;
-			newNode->datum = data;
+		void popFront(T data);
 
-			if (size == 0) {
-				head = newNode;
-				size++;
-			}
-			else {
-
-				Node<T> *lastNode = head;
-
-      	for (int i = 0; i < size; i++) {
-				
-					if (lastNode->next == NULL) {
-						lastNode->next = newNode;
-						size++;
-					}
-					else {
-						lastNode = lastNode->next;
-					}	
-
-      	}
-			} 
-
-		}
-
-		void pushFront(T data) {
-
-		}
-
-		void popBack(T data) {
-
-			Node<T> *nodeToDelete = new Node<T>();
-			nodeToDelete = head;
-
-      for (int i = 0; i < size; i++) {
-
-				if (data == nodeToDelete->datum) {
-
-				} 
-				
-      }  
-
-		}
-
-		void popFront(T data) {
-
-		}
-
-		void printData() {
-
-			Node<T> *nodeToPrint = new Node<T>();
-      nodeToPrint = head;
-
-			for (int i = 0; i < size; i++) {
-				cout << nodeToPrint->datum << endl;
-				nodeToPrint = nodeToPrint->next;
-			}
-
-		}
+		void printData();
 
 };
+
+#endif // DOUBLY_LINKED_LIST_H

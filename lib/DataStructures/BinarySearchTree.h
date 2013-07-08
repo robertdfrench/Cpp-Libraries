@@ -1,7 +1,28 @@
-// J. Caleb Wherry
-// Binary Search Tree Implementation
-// Created: 12/23/2010
-// Last Modified: 12/23/2010
+/////////////////////////////
+//
+//  File:
+//      \file BinarySearchTree.h
+//
+//  Description:
+//      \brief Binary Search Tree: Header
+//
+//  Author:
+//      \author J. Caleb Wherry
+//
+/////////////////////////////
+
+// Include Guards:
+#ifndef BINARY_SEARCH_TREE_H
+#define BINARY_SEARCH_TREE_H
+
+// Forward Declared Dependencies:
+//
+
+// Local Include Dependencies:
+//
+
+// Compiler Include Dependencies:
+//
 
 template <typename T>
 struct Node {
@@ -20,75 +41,14 @@ class BinarySearchTree {
 
 	public:
 
-		BinarySearchTree() {
+		BinarySearchTree();
 
-			root = NULL;
-			depth = 0;
+		void insert(T data);
 
-		}
+		void remove(T data);
 
-		void pushBack(T data) {
+		void printData();
 
-			Node<T> *newNode = new Node<T>();
-			newNode->next = NULL;
-			newNode->datum = data;
+}; // BinarySearchTree
 
-			if (size == 0) {
-				head = newNode;
-				size++;
-			}
-			else {
-
-				Node<T> *lastNode = head;
-
-      	for (int i = 0; i < size; i++) {
-				
-					if (lastNode->next == NULL) {
-						lastNode->next = newNode;
-						size++;
-					}
-					else {
-						lastNode = lastNode->next;
-					}	
-
-      	}
-			} 
-
-		}
-
-		void pushFront(T data) {
-
-		}
-
-		void popBack(T data) {
-
-			Node<T> *nodeToDelete = new Node<T>();
-			nodeToDelete = head;
-
-      for (int i = 0; i < size; i++) {
-
-				if (data == nodeToDelete->datum) {
-
-				} 
-				
-      }  
-
-		}
-
-		void popFront(T data) {
-
-		}
-
-		void printData() {
-
-			Node<T> *nodeToPrint = new Node<T>();
-      nodeToPrint = head;
-
-			for (int i = 0; i < size; i++) {
-				cout << nodeToPrint->datum << endl;
-				nodeToPrint = nodeToPrint->next;
-			}
-
-		}
-
-};
+#endif // BINARY_SEARCH_TREE_H

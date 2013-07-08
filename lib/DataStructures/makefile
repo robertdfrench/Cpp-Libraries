@@ -11,7 +11,7 @@
 ##
 #############################
 
-SRC = BogoSort.cpp
-LIB = libsorting.a
+SRC = SinglyLinkedList.cpp DoublyLinkedList.cpp BinarySearchTree.cpp
+LIB = libdatastructures.a
 
 include $(abspath ../makefile-lib.common)

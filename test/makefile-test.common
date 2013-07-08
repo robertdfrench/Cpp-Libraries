@@ -14,8 +14,6 @@
 # Double directoy up because this path is expanded when it is included (which is a directory down):
 include $(abspath ../../makefile.common)
 
-.PHONY: clean
-
 default: $(PROG)
 
 OBJS = $(SRCS:.cpp=.o)
@@ -25,7 +23,7 @@ $(PROG): $(OBJS)
 	@cp $(PROG) $(BIN_DIR)
 
 %.o: %.cpp
-	$(CC) -- $(CFLAGS) $(INCLUDES) -c $<  -o $@
+	$(CC) -- ${CFLAGS} $(INCLUDES) -c $< -o $@
 
 clean:
 	$(RM) *.o *~ $(PROG)
