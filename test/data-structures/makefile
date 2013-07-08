@@ -4,16 +4,16 @@
 ##      \file makefile
 ##
 ##  Description:
-##      \brief Sorting tests makefile for C++ Libraries
+##      \brief DX tests makefile
 ##
 ##  Author:
 ##      \author J. Caleb Wherry
 ##
 #############################
 
-PROG = sorting-tests
-SRCS = sorting-tests.cpp
-LFLAGS += -L${ROOT_DIR}/lib/Sorting
-LIBS += -lsorting
+PROG = data-structure-tests
+SRCS = data-structure-tests.cpp
+LFLAGS += -L${ROOT_DIR}/lib/DataStructures
+LIBS += -ldatastructures
 
 include $(abspath ../makefile-test.common)

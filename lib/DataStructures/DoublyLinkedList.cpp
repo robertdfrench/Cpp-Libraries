@@ -86,7 +86,7 @@ void DoublyLinkedList<T>::popFront(T data)
 }
 
 template <typename T>
-void DoublyLinkedList<T>::printData() 
+void DoublyLinkedList<T>::print() 
 {
     Node<T> *nodeToPrint = new Node<T>();
     nodeToPrint = head;

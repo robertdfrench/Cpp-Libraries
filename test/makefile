@@ -13,10 +13,10 @@
 
 default:
 	$(MAKE) -C sorting
-#	$(MAKE) -C searching
-#	$(MAKE) -C data_structures
+	$(MAKE) -C searching
+#	$(MAKE) -C data-structures
 
 clean:
 	$(MAKE) -C sorting clean
-#	$(MAKE) -C searching clean
-#	$(MAKE) -C data_structures clean
+	$(MAKE) -C searching clean
+#	$(MAKE) -C data-structures clean

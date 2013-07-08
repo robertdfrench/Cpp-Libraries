@@ -51,7 +51,7 @@ class DoublyLinkedList {
 
 		void popFront(T data);
 
-		void printData();
+		void print();
 
 };
 

@@ -1,10 +1,10 @@
 /////////////////////////////
 //
 //  File:
-//      \file sort_test.cpp
+//      \file sorting_tests.cpp
 //
 //  Description:
-//      \brief Sort Test Program
+//      \brief Sorting Tests
 //
 //  Author:
 //      \author J. Caleb Wherry

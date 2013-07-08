@@ -4,14 +4,14 @@
 ##      \file makefile
 ##
 ##  Description:
-##      \brief Sorting library makefile for C++ Libraries
+##      \brief Searching library makefile for C++ Libraries
 ##
 ##  Author:
 ##      \author J. Caleb Wherry
 ##
 #############################
 
-SRC = SinglyLinkedList.cpp DoublyLinkedList.cpp BinaryTree.cpp
-LIB = libdatastructures.a
+SRC =
+LIB = libsearching.a
 
 include $(abspath ../makefile-lib.common)
