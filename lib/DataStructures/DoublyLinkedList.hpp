@@ -25,6 +25,10 @@
 #include <cstdlib>      // NULL
 #include <iostream>     // cout, endl
 
+// Namespace:
+namespace doublyLinkedList
+{
+
 template <typename T>
 struct Node {
 	T datum;
@@ -36,12 +40,11 @@ template <typename T>
 class DoublyLinkedList {
 
 	private:
-
-		int size;
 		Node<T>* head;
+        Node<T>* tail;
+        int size;
 
 	public:
-
 		DoublyLinkedList();
 
 		void pushBack(T data);
@@ -60,38 +63,34 @@ template <typename T>
 DoublyLinkedList<T>::DoublyLinkedList()
 {
     head = NULL;
+    tail = NULL;
     size = 0;
 }
 
 template <typename T>
 void DoublyLinkedList<T>::pushBack(T data)
 {
-
+    // Create new node:
     Node<T>* newNode = new Node<T>();
+
+    // Set values for new node:
     newNode->next = NULL;
+    newNode->prev = NULL;
     newNode->datum = data;
 
-    if (size == 0)
+    // Insert new node based on current head and tail:
+    if (head == NULL)
     {
         head = newNode;
-        size++;
+        tail = newNode;
+        size = 1;
     }
     else
     {
-        Node<T> *lastNode = head;
-
-        for (int i = 0; i < size; i++)
-        {
-            if (lastNode->next == NULL)
-            {
-                lastNode->next = newNode;
-                size++;
-            }
-            else
-            {
-                lastNode = lastNode->next;
-            }
-        }
+        newNode->prev = tail;
+        tail->next = newNode;
+        tail = newNode;
+        size++;
     }
 }
 
@@ -128,11 +127,13 @@ void DoublyLinkedList<T>::print()
     Node<T>* nodeToPrint = new Node<T>();
     nodeToPrint = head;
 
-    for (int i = 0; i < size; i++)
+    while (nodeToPrint != NULL)
     {
-        std::cout << nodeToPrint->datum << std::endl;
+        std::cout << nodeToPrint->datum << " ";
         nodeToPrint = nodeToPrint->next;
     }
 }
+
+} // doublyLinkedList namespace
 
 #endif // DOUBLY_LINKED_LIST_H

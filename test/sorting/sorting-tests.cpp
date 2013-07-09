@@ -17,7 +17,10 @@
 #include <stdlib.h>
 
 // Local Includes:
-#include "Sorting/BogoSort.h"
+#include "Sorting/BogoSort.hpp"
+
+// Typedefs:
+typedef int myType;
 
 // Namespaces:
 using namespace std;
@@ -33,14 +36,14 @@ int main()
     srand( time(NULL) );
 
     // First test list:
-    vector<int> testList;
+    vector<myType> testList;
 
     // Fill the vector with 10 random ints:
     for (int i = numItems; i > 0; i--)
         testList.push_back(rand() % 100);
 
     // Create first Sort object:
-    BogoSort* bogoSort = new BogoSort(testList);
+    BogoSort<myType>* bogoSort = new BogoSort<myType>(testList);
 
     // Print the list at first:
     cout << endl << "Unsorted List: ";

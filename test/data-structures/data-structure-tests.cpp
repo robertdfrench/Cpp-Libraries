@@ -12,7 +12,7 @@
 /////////////////////////////
 
 // Local Include Dependencies:
-//#include "DataStructures/SinglyLinkedList.h"
+#include "DataStructures/SinglyLinkedList.hpp"
 #include "DataStructures/DoublyLinkedList.hpp"
 
 // Compiler Include Dependencies:
@@ -23,37 +23,54 @@
 typedef int myType; 
 
 // Namespaces:
+namespace DLL = doublyLinkedList;
+namespace SLL = singlyLinkedList;
+using namespace DLL;
+using namespace SLL;
 using namespace std;
 
 int main() 
 {
+    // Grab current cout flags, used for when the stream is altered and the user wants
+    //   to reset it to the default values: 
+    ios::fmtflags f( cout.flags() );
+
     // Test 1:
-    /*
-	SinglyLinkedList<myType>* list = new SinglyLinkedList<myType>();
+    {
+	    SinglyLinkedList<char>* list = new SinglyLinkedList<char>();
 
-	myType var = 1;
+	    char var = 'A';
 
-	for (int i = 1; i <= 10; i++) {
-		list->pushBack(var);
-		var = var + var;
-	}
+	    for (int i = 1; i <= 10; i++) 
+        {
+		    list->pushBack(var);
+		    var++;
+	    }
 
-	cout << "List 1 With Added Items:" << endl;
-	list->print();
-    */
-
-    // Test 2:
-    DoublyLinkedList<myType>* list = new DoublyLinkedList<myType>();
-
-    int var = 1;
-
-    for (int i = 1; i <= 10; i++) {
-        list->pushBack(var);
-        var++;
+	    cout << endl << "Test 1 - Char list:" << endl << "\t";
+	    list->print();
+        cout << endl;
     }
 
-    cout << "List 1 With Added Items:" << endl;
-    list->print();
+    // Reset cout stream flags:
+    cout.flags(f);
+
+    // Test 2:
+    {
+        DoublyLinkedList<myType>* list = new DoublyLinkedList<myType>();
+
+        myType var = 1;
+
+        for (int i = 1; i <= 10; i++) 
+        {
+            list->pushBack(var);
+            var++;
+        }
+
+        cout << endl << "Test 2 - Int list:" << endl << "\t";
+        list->print();
+        cout << endl;
+    }
 
     return 0;
 }

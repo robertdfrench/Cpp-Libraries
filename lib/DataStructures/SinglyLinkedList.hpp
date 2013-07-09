@@ -25,6 +25,10 @@
 #include <cstdlib>      // NULL
 #include <iostream>     // cout, endl
 
+// Namespace:
+namespace singlyLinkedList
+{
+
 template <typename T>
 struct Node {
 	T datum;
@@ -35,12 +39,11 @@ template <typename T>
 class SinglyLinkedList {
 
 	private:
-
-		Node<T> *head;
-		Node<T> *tail;
+		Node<T>* head;
+		Node<T>* tail;
+        int size;
 
 	public:
-
 		SinglyLinkedList();
 
 		void insert(T data);
@@ -60,45 +63,40 @@ class SinglyLinkedList {
 		void print();
 
 		void printReverse();
-};
+
+}; // SinglyLinkedList
 
 template <typename T>
 SinglyLinkedList<T>::SinglyLinkedList()
 {
-
     head = NULL;
     tail = NULL;
-
+    size = 0;
 }
 
 template <typename T>
 void SinglyLinkedList<T>::pushBack(T data)
 {
+    // Create new node:
+    Node<T>* newNode = new Node<T>();
 
-    Node<T> *newNode = new Node<T>();
+    // Set values for new node:
     newNode->next = NULL;
     newNode->datum = data;
 
-    if (head == NULL) {
+    // Insert new node based on current head and tail:
+    if (head == NULL) 
+    {
         head = newNode;
         tail = newNode;
+        size = 1;
     }
-    else {
-
-        Node<T> *lastNode = head;
-
-        while (lastNode->next != NULL) {
-
-            if (lastNode->next == NULL) {
-                lastNode->next = newNode;
-            }
-            else {
-                lastNode = lastNode->next;
-            }
-
-        }
+    else
+    {
+        tail->next = newNode;
+        tail = newNode;
+        size++;
     }
-
 }
 
 template <typename T>
@@ -111,7 +109,7 @@ template <typename T>
 void SinglyLinkedList<T>::popBack()
 {
 
-    Node<T> *nodeToDelete = new Node<T>();
+    Node<T>* nodeToDelete = new Node<T>();
     nodeToDelete = head;
 
     while (nodeToDelete->next != NULL)
@@ -131,14 +129,16 @@ template <typename T>
 void SinglyLinkedList<T>::print()
 {
 
-    Node<T> *nodeToPrint = new Node<T>();
+    Node<T>* nodeToPrint = new Node<T>();
     nodeToPrint = head;
 
-    while (nodeToPrint->next != NULL)
+    while (nodeToPrint != NULL)
     {
-        std::cout << nodeToPrint->datum << std::endl;
+        std::cout << nodeToPrint->datum << " ";
         nodeToPrint = nodeToPrint->next;
     }
 }
+
+} // singlyLinkedList namespace
 
 #endif // SINGLY_LINKED_LIST_H

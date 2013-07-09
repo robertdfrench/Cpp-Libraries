@@ -25,6 +25,10 @@
 #include <cstdlib>
 #include <iostream>
 
+// Namespace:
+namespace binaryTree
+{
+
 template <typename T>
 struct Node {
 	T datum;
@@ -36,12 +40,10 @@ template <typename T>
 class BinaryTree {
 
 	private:
-
 		Node<T>* root;
 		int depth;
 
 	public:
-
 		BinaryTree();
 
         void preOrderTraversal();
@@ -92,5 +94,7 @@ void BinaryTree<T>::printTree()
 {
     // TODO
 }
+
+} // binaryTree namespace
 
 #endif // BINARY_TREE_H
