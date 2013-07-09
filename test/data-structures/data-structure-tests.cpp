@@ -14,6 +14,7 @@
 // Local Include Dependencies:
 #include "DataStructures/SinglyLinkedList.hpp"
 #include "DataStructures/DoublyLinkedList.hpp"
+#include "DataStructures/BinaryTree.hpp"
 
 // Compiler Include Dependencies:
 #include <iostream>

@@ -19,81 +19,85 @@
 //
 
 // Local Include Dependencies:
-//
+#include "Tree.hpp"
 
 // Compiler Include Dependencies:
 #include <cstdlib>
 #include <iostream>
 
+// Namespaces:
+using namespace tree;
+
 // Namespace:
 namespace binaryTree
 {
+    // Binary Tree Node:
+    template <typename T>
+    struct Node 
+    {
+        T datum;
+        Node* leftChild;
+        Node* rightChild;
+    };
 
-template <typename T>
-struct Node {
-	T datum;
-	Node* leftChild;
-	Node* rightChild;
-};
+    // Binary Tree class:
+    template <typename T>
+    class BinaryTree: public Tree
+    {
+        private:
+            Node<T>* root;
 
-template <typename T>
-class BinaryTree {
+        public:
+            BinaryTree();
 
-	private:
-		Node<T>* root;
-		int depth;
+            void preOrderTraversal();
 
-	public:
-		BinaryTree();
+            void inOrderTraversal();
 
-        void preOrderTraversal();
+            void postOrderTraversal();
 
-        void inOrderTraversal();
+            void breadthFirstTraversal();
 
-        void postOrderTraversal();
+            void print();
 
-        void breadthFirstTraversal();
+    }; // BinaryTree
 
-        void printTree();
+    template <typename T>
+    BinaryTree<T>::BinaryTree()
+        : root(NULL), 
+          Tree(0)
+    {
+    }
 
-}; // BinaryTree
+    template <typename T>
+    void BinaryTree<T>::preOrderTraversal()
+    {
+        // TODO
+    }
 
-template <typename T>
-BinaryTree<T>::BinaryTree()
-{
-    root = NULL;
-    depth = 0;
-}
+    template <typename T>
+    void BinaryTree<T>::inOrderTraversal()
+    {
+        // TODO
+    }
 
-template <typename T>
-void BinaryTree<T>::preOrderTraversal()
-{
-    // TODO
-}
+    template <typename T>
+    void BinaryTree<T>::postOrderTraversal()
+    {
+        // TODO
+    }
 
-template <typename T>
-void BinaryTree<T>::inOrderTraversal()
-{
-    // TODO
-}
+    template <typename T>
+    void BinaryTree<T>::breadthFirstTraversal()
+    {
+        // TODO
+    }
 
-template <typename T>
-void BinaryTree<T>::postOrderTraversal()
-{
-    // TODO
-}
-
-template <typename T>
-void BinaryTree<T>::breadthFirstTraversal()
-{
-    // TODO
-}
-
-template <typename T>
-void BinaryTree<T>::printTree()
-{
-    // TODO
-}
+    template <typename T>
+    void BinaryTree<T>::print()
+    {
+        // TODO
+    }
 
 } // binaryTree namespace
 
