@@ -23,7 +23,7 @@ $(PROG): $(OBJS)
 	@cp $(PROG) $(BIN_DIR)
 
 %.o: %.cpp
-	$(CC) -- ${CFLAGS} $(INCLUDES) -c $< -o $@
+	$(CC) -- ${CFLAGS} $(INCLUDES) ${LIBS} -c $< -o $@
 
 clean:
 	$(RM) *.o *~ $(PROG)

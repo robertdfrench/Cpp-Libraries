@@ -13,7 +13,7 @@
 
 // Local Include Dependencies:
 //#include "DataStructures/SinglyLinkedList.h"
-#include "DataStructures/DoublyLinkedList.h"
+#include "DataStructures/DoublyLinkedList.hpp"
 
 // Compiler Include Dependencies:
 #include <iostream>

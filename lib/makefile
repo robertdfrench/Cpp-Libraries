@@ -14,11 +14,11 @@
 all:
 	$(MAKE) -C Sorting
 	$(MAKE) -C Searching
-	$(MAKE) -C DataStructures
+#	$(MAKE) -C DataStructures   **TEMPLATED HEADERS**
 
 .PHONY: clean
 
 clean:
 	$(MAKE) -C Sorting clean
 	$(MAKE) -C Searching clean
-	$(MAKE) -C DataStructures clean
+#	$(MAKE) -C DataStructures clean **TEMPLATED HEADERS**
