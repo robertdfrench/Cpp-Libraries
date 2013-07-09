@@ -15,7 +15,7 @@
 include makefile.common
 
 # Doxyfile:
-DOXYFILE = ${DOC_DIR}/DoxyFile
+DOXYFILE = ${DOC_DIR}/Doxyfile
 
 # Phony targets
 .PHONY: default dirs lib test doc clean

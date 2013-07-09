@@ -61,6 +61,7 @@ int main()
     // Other stuff:
     cout << "\tNumber of shuffles: " << numIterations << endl;
     cout << "\tAverage complexity: O(n!) - " << factorial(numItems, 1) << endl;
+    cout << endl;
 
     return 0;
 };
