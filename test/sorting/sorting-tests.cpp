@@ -46,7 +46,7 @@ int main()
     BogoSort<myType>* bogoSort = new BogoSort<myType>(testList);
 
     // Print the list at first:
-    cout << endl << "Unsorted List: ";
+    cout << endl << "Unsorted List: " << endl << "\t";
     bogoSort->print();
 
     cout << endl << "Testing Bogo Sort..." << endl;

@@ -26,8 +26,10 @@ typedef int myType;
 // Namespaces:
 namespace DLL = doublyLinkedList;
 namespace SLL = singlyLinkedList;
+namespace BT  = binaryTree;
 using namespace DLL;
 using namespace SLL;
+using namespace BT;
 using namespace std;
 
 int main() 
@@ -70,6 +72,42 @@ int main()
 
         cout << endl << "Test 2 - Int list:" << endl << "\t";
         list->print();
+        cout << endl;
+    }
+
+    // Reset cout stream flags:
+    cout.flags(f);
+
+    // Test 3:
+    {
+        BinaryTree<int>* bt = new BinaryTree<int>();
+
+        // Insert a bunch of stuff:
+        bt->insert(11);
+        bt->insert(6);
+        bt->insert(8);
+        bt->insert(19);
+        bt->insert(4);
+        bt->insert(10);
+        bt->insert(5);
+        bt->insert(17);
+        bt->insert(43);
+        bt->insert(49);
+        bt->insert(31);
+
+        // Print tree preOrderTraversal:
+        cout << endl << "Binary Tree PreOrderTravesal:" << endl << "\t";
+        bt->preOrderTraversal();
+        cout << endl;
+
+        // Print tree inOrderTraversal:
+        cout << endl << "Binary Tree InOrderTravesal:" << endl << "\t";
+        bt->inOrderTraversal();
+        cout << endl;
+
+        // Print tree postOrderTraversal:
+        cout << endl << "Binary Tree PostOrderTravesal:" << endl << "\t";
+        bt->postOrderTraversal();
         cout << endl;
     }
 
