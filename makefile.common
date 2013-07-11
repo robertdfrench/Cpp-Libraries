@@ -33,4 +33,7 @@ INCLUDES += -I/usr/local/include -I$(INCLUDE_DIR)
 LFLAGS += -L/usr/local/lib -L$(LIB_DIR)
 
 # Delete tool:
-RM := /bin/rm -f
+RM := /bin/rm -Rf
+
+# Doxyfile:
+DOXYFILE = $(DOC_DIR)/Doxyfile

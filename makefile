@@ -14,14 +14,11 @@
 # Include all common make rules:
 include makefile.common
 
-# Doxyfile:
-DOXYFILE = ${DOC_DIR}/Doxyfile
-
-# Phony targets
-.PHONY: default dirs lib test doc clean
+# Phony targets:
+.PHONY: default dirs lib test run-test doc clean
 
 # Default rule:
-default: dirs lib test
+default: dirs lib test doc
 
 # Lets make some directories:
 dirs:
@@ -35,14 +32,22 @@ lib:
 test:
 	$(MAKE) -C test
 
+# Run all tests:
+run-test:
+	@for f in `find $(BIN_DIR) -type f -executable`; do \
+        $$f; \
+    done
+
 # Create documentation:
 doc:
-	doxygen $(DOXYFILE)
+	@doxygen $(DOXYFILE) > /dev/null 2>&1
+	@echo '** Doxygen docs created at $(DOC_DIR)/html'
 
 # I probably should create a distclean as well but... too lazy right now.
 clean:
 	$(MAKE) -C lib clean
 	$(MAKE) -C test clean 
-	@if [ -d $(BIN_DIR) ]; then rm -Rf $(BIN_DIR); fi
-	@if [ -d $(DOC_DIR)/html ]; then rm -Rf $(DOC_DIR)/html; fi
-	@echo "Removed BIN and DOC/HTML directories."
+	@if [ -d $(BIN_DIR) ]; then $(RM) $(BIN_DIR); fi
+	@echo '** Deleted bin directory: $(BIN_DIR)'
+	@if [ -d $(DOC_DIR)/html ]; then $(RM) $(DOC_DIR)/html; fi
+	@echo '** Deleted doc directory: $(DOC_DIR)/html'
