@@ -11,9 +11,10 @@
 ##
 #############################
 
+ROOT = $(abspath ../..)
 PROG = data-structure-tests
 SRCS = data-structure-tests.cpp
-LFLAGS += -L${ROOT_DIR}/lib/DataStructures
+INCLUDES += -I${ROOT}/lib/DataStructures
 LIBS +=
 
 include $(abspath ../makefile-test.common)

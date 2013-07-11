@@ -11,7 +11,7 @@
 ##
 #############################
 
-SRC =
+SRC = SearchUtil.cpp
 LIB = libsearching.a
 
 include $(abspath ../makefile-lib.common)

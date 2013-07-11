@@ -12,9 +12,9 @@
 /////////////////////////////
 
 // Local Include Dependencies:
-#include "DataStructures/SinglyLinkedList.hpp"
-#include "DataStructures/DoublyLinkedList.hpp"
-#include "DataStructures/BinaryTree.hpp"
+#include "SinglyLinkedList.hpp"
+#include "DoublyLinkedList.hpp"
+#include "BinaryTree.hpp"
 
 // Compiler Include Dependencies:
 #include <iostream>

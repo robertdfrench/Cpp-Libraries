@@ -17,7 +17,7 @@
 #include <stdlib.h>
 
 // Local Includes:
-#include "Sorting/BogoSort.hpp"
+#include "BogoSort.hpp"
 
 // Typedefs:
 typedef int myType;

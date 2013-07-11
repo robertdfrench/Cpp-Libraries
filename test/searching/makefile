@@ -11,9 +11,10 @@
 ##
 #############################
 
+ROOT = $(abspath ../..)
 PROG = searching-tests
 SRCS = searching-tests.cpp
-LFLAGS += -L${ROOT_DIR}/lib/Searching
-LIBS += -lsearching
+INCLUDES += -I$(ROOT)/lib/Searching
+LIBS += -L$(ROOT)/lib/Searching -lsearching
 
 include $(abspath ../makefile-test.common)

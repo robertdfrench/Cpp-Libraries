@@ -20,17 +20,23 @@ LIB_DIR := $(ROOT_DIR)/lib
 INCLUDE_DIR := $(ROOT_DIR)/include
 DOC_DIR := $(ROOT_DIR)/doc
 
+# Create bin dir:
+$(shell mkdir -p $(BIN_DIR))
+
 # Compiler:
 CC := g++
 
-# Compile-time flags:
-CFLAGS := -Wall -g -O2 -std=c++0x -I$(LIB_DIR)
+# Compiler flags:
+CFLAGS := -Wall -g -O2 -std=c++0x
 
-# Directories containing header files other than /usr/include:
+# Linker flags:
+LFLAGS :=
+
+# Header includes:
 INCLUDES += -I/usr/local/include -I$(INCLUDE_DIR)
 
-# Linking flags and library paths in addition to /usr/lib:
-LFLAGS += -L/usr/local/lib -L$(LIB_DIR)
+# Library paths:
+LIBS += -L/usr/local/lib -L$(BIN_DIR)
 
 # Delete tool:
 RM := /bin/rm -Rf

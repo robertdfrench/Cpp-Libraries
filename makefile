@@ -15,14 +15,10 @@
 include makefile.common
 
 # Phony targets:
-.PHONY: default dirs lib test run-test doc clean
+.PHONY: default lib test run-test doc clean
 
 # Default rule:
-default: dirs lib test doc
-
-# Lets make some directories:
-dirs:
-	@mkdir -p $(BIN_DIR)
+default: lib test doc
 
 # Compile all libs:
 lib:
