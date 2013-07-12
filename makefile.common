@@ -11,6 +11,7 @@
 ##
 #############################
 
+
 # Top-level directories:
 ROOT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 SRC_DIR := $(ROOT_DIR)/src
@@ -20,26 +21,43 @@ LIB_DIR := $(ROOT_DIR)/lib
 INCLUDE_DIR := $(ROOT_DIR)/include
 DOC_DIR := $(ROOT_DIR)/doc
 
+
 # Create bin dir:
 $(shell mkdir -p $(BIN_DIR))
 
-# Compiler:
-CC := g++
 
-# Compiler flags:
-CFLAGS := -Wall -g -O2 -std=c++0x
+# ARCHIVER:
+AR := ar
+
+# Assembler:
+AS := as
+
+# C++ Compiler:
+CXX := g++
+
+# Archiver flags:
+ARFLAGS = rscv
+
+# Assembler flags:
+ASFLAGS +=
+
+# C++ Compiler flags:
+CXXFLAGS += -Wall -g -O2 -std=c++0x
 
 # Linker flags:
-LFLAGS :=
+LDFLAGS +=
 
 # Header includes:
 INCLUDES += -I/usr/local/include -I$(INCLUDE_DIR)
 
 # Library paths:
-LIBS += -L/usr/local/lib -L$(BIN_DIR)
+LIBS += -L/usr/local/lib #-L$(BIN_DIR)
 
 # Delete tool:
 RM := /bin/rm -Rf
 
+# Global objects to remove:
+GLOBAL_REMOVES := Makefile.bak makefile.bak *~
+
 # Doxyfile:
-DOXYFILE = $(DOC_DIR)/Doxyfile
+DOXYFILE := $(DOC_DIR)/Doxyfile

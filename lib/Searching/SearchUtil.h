@@ -27,8 +27,17 @@
 /// searchUtil Namespace
 namespace searchUtil
 {
+    class Test
+    {
+        private:
+            int a;
+            double b;
 
-    bool greaterThan(int a, int b);
+        public:
+            Test();
+            bool greaterThan(int a, int b);
+            int what();
+    };
 
 } // namespace searchUtil
 

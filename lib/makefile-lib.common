@@ -19,11 +19,10 @@ OBJS = $(SRC:.cpp=.o)
 default: $(LIB)
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 $(LIB): $(OBJS)
-	ar rcs $(LIB) $(OBJS)
-	@cp $(LIB) $(BIN_DIR)
+	$(AR) $(ARFLAGS) $(LIB) $(OBJS)
 
 clean:
-	$(RM) $(OBJS) $(LIB) Makefile.bak makefile.bak
+	$(RM) $(OBJS) $(LIB) $(GLOBAL_REMOVES)

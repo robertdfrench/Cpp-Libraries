@@ -18,12 +18,12 @@ default: $(PROG)
 
 OBJS = $(SRCS:.cpp=.o)
 
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+
 $(PROG): $(OBJS)
-	$(CC) $(LFLAGS) $(OBJS) $(LIBS) -o $(PROG)
+	$(CXX) $(LDFLAGS) $(OBJS) $(LIBS) -o $(PROG)
 	@cp $(PROG) $(BIN_DIR)
 
-%.o: %.cpp
-	$(CC) $(CFLAGS) $(INCLUDES) $(LIBS) -c $< -o $@
-
 clean:
-	$(RM) $(PROG) $(OBJS) *~
+	$(RM) $(PROG) $(OBJS) $(GLOBAL_REMOVES)

@@ -16,18 +16,29 @@
 
 // Compiler Include Dependencies:
 #include <string>
+#include <iostream>
 
 // Forward Declared Dependencies:
 //
 
 // Namespaces:
-//
+using namespace searchUtil;
+
+Test::Test()
+{
+    std::cout << "WHaaaat" << std::endl;
+}
 
 // Test function
-bool greaterThan(int a, int b)
+bool Test::greaterThan(int a, int b)
 {
     if (a > b)
         return true;
     else
         return false;
+}
+
+int Test::what()
+{
+    return 7;
 }

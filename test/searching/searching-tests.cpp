@@ -19,7 +19,7 @@
 #include "SearchUtil.h"
 
 // Namespaces:
-using namespace searchUtil;
+namespace SU = searchUtil;
 using namespace std;
 
 int main()
@@ -29,7 +29,9 @@ int main()
 
     bool result = false;
 
-    result = greaterThan(a, b);
+    SU::Test* test = new SU::Test();
+
+    //result = SU::greaterThan(a,b);
     
     cout << "Greater than? " << (result ? "Yes":"No") << endl;
 
