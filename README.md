@@ -38,6 +38,10 @@ Now we need to go to the src directory, create the libs, and move them to the li
     $ sudo make
     $ sudo cp *.a /usr/lib
 
+#### Google Mock:
+
+    $ sudo apt-get install google-mock
+
 License
 -----------
 This project is released under the [MIT License](http://opensource.org/licenses/MIT). See the LICENSE file for more information.
