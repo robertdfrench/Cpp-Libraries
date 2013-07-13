@@ -51,7 +51,7 @@ LDFLAGS +=
 INCLUDES += -I/usr/local/include -I$(INCLUDE_DIR)
 
 # Library paths:
-LIBS += -L/usr/local/lib #-L$(BIN_DIR)
+LIBS += -L/usr/local/lib
 
 # Delete tool:
 RM := /bin/rm -Rf

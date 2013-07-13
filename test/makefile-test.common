@@ -16,6 +16,8 @@ include $(abspath ../../makefile.common)
 
 default: $(PROG)
 
+LIBS += -lpthread -lgtest -lgtest_main
+
 OBJS = $(SRCS:%.cpp=%.o)
 
 $(PROG): $(OBJS)

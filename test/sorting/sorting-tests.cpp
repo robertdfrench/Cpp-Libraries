@@ -13,12 +13,48 @@
 
 // Compiler Includes:
 #include <iostream>
+#include <string>
 #include <vector>
 #include <stdlib.h>
+#include <boost/lambda/lambda.hpp>
 
 // Local Includes:
 #include "BogoSort.hpp"
 
+// Test include:
+#include <gtest/gtest.h>
+
+TEST(TEST1, TEST1_a)
+{
+    using namespace boost::lambda;
+    
+    std::vector<std::string> a;
+    a.push_back("Caleb");
+    a.push_back("Wherry");
+
+    std::string numStr = "";
+
+    std::for_each (
+        a.begin(), a.end(), numStr += _1 + " " );
+
+    ASSERT_EQ(numStr, "Caleb Wherry ");
+
+    ASSERT_TRUE(true);
+
+    ASSERT_EQ(3, 3);
+}
+
+TEST(TEST1, TEST1_b)
+{
+    ASSERT_NE(1,2);
+}
+
+TEST(TEST2, TEST2_a)
+{
+    ASSERT_EQ("", "");
+}
+
+/*
 // Typedefs:
 typedef int myType;
 
@@ -26,8 +62,9 @@ typedef int myType;
 using namespace std;
 
 // Functions:
-int factorial(int x, int result);
+//int factorial(int x, int result);
 
+// Main
 int main()
 {
 
@@ -66,6 +103,7 @@ int main()
     return 0;
 };
 
+
 int factorial (int x, int result)
 {
     if (x == 1) 
@@ -77,3 +115,5 @@ int factorial (int x, int result)
         return factorial( x-1, x*result );
     }
 }
+
+*/
