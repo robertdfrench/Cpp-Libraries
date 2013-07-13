@@ -17,7 +17,7 @@ The commands to install these dependencies are for Debian-based systems. However
 
 #### Boost:
 
-Installs Boost headers in /usr/inlcude:
+Installs Boost headers in /usr/include:
 
     $ sudo apt-get install libboost-dev
 
@@ -47,6 +47,9 @@ Install
 The easiest way to get the source is by cloning this git repo:
 
     $ git clone git@github.com:calebwherry/Cpp-Libraries.git
+
+CD into the new directory and run make:
+
     $ cd Cpp-Libraries
     $ make
 
