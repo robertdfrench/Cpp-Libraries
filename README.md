@@ -1,7 +1,7 @@
 Cpp-Libraries
 ===================
 
-C++ Libraries for an assortment of differents things including but not limited to: Data Strauctures, Searching & Sorting Algorithms, and Math & String Utilities. 
+C++ Libraries for an assortment of different projects including but not limited to: Data Strauctures, Searching & Sorting Algorithms, and Math & String Utilities. 
 
 Why
 -------
