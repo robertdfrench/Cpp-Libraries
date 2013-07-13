@@ -21,6 +21,14 @@ Installs Boost headers in /usr/include:
 
     $ sudo apt-get install libboost-dev
 
+#### GNU Scientific Library
+
+    $ sudo apt-get install gsl-bin libgsl0-dev
+
+#### Google Mock:
+
+    $ sudo apt-get install google-mock
+
 #### Google Test:
 
 For GTest, you will need cmake to create the libs:
@@ -37,10 +45,6 @@ Now we need to go to the src directory, create the libs, and move them to the li
     $ sudo cmake CMakeLists.txt
     $ sudo make
     $ sudo cp *.a /usr/lib
-
-#### Google Mock:
-
-    $ sudo apt-get install google-mock
 
 Install
 -----------
