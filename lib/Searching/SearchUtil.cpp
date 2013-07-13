@@ -22,28 +22,31 @@
 //
 
 // Namespaces:
-using namespace searchUtil;
-
-Test::Test()
+namespace searchUtil
 {
-    std::cout << "WHaaaat" << std::endl;
-}
 
-// Test function
-bool Test::greaterThan(int a, int b)
-{
-    if (a > b)
-        return true;
-    else
-        return false;
-}
+    Test::Test()
+    {
+        std::cout << "WHaaaat" << std::endl;
+    }
 
-int Test::what()
-{
-    return 7;
-}
+    // Test function
+    bool Test::greaterThan(int a, int b)
+    {
+        if (a > b)
+            return true;
+        else
+            return false;
+    }
 
-void searchUtil::printSomeShit()
-{
-    std::cout << "New print function" << std::endl;
-}
+    int Test::what()
+    {
+        return 7;
+    }
+
+    void printSomeShit()
+    {
+        std::cout << "New print function" << std::endl;
+    }
+
+} // namespace searchUtil
