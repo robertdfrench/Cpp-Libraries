@@ -15,13 +15,28 @@ Dependencies
 
 The commands to install these dependencies are for Debian-derived systems. However, you should be able to get them using any ol' package manager.
 
-Boost - installs in /usr/include:
+#### Boost:
+
+Installs Boost headers in /usr/inlcude:
 
     $ sudo apt-get install libboost-dev
 
-Google Test/Mock:
+#### Google Test:
+
+For GTest, you will need cmake to create the libs:
+
+    $ sudo apt-get install cmake
+
+Once that is complete, get the GTest src (puts in /usr/src):
 
     $ sudo apt-get install libgtest-dev
+
+Now we need to go to the src directory, creates the libs, and move then to lib dir:
+
+    $ cd /usr/src/gtest
+    $ sudo cmake CMakeLists.txt
+    $ sudo make
+    $ sudo cp *.a /usr/lib
 
 License
 -----------
