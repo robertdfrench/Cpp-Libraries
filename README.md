@@ -13,7 +13,7 @@ I am most interested in some of the more advanced tree structures, graph searchi
 Dependencies
 ------------
 
-The commands to install these dependencies are for Debian-derived systems. However, you should be able to get them using any ol' package manager.
+The commands to install these dependencies are for Debian-based systems. However, you should be able to get them using any ol' package manager.
 
 #### Boost:
 
