@@ -15,7 +15,7 @@
 include makefile.common
 
 # Phony targets:
-.PHONY: default lib test run-test doc clean
+.PHONY: default lib depend test run-test doc clean
 
 # Default rule:
 default: lib test doc
@@ -36,14 +36,17 @@ run-test:
 
 # Create documentation:
 doc:
+	@echo -n '** Creating Doxygen docs at $(DOC_DIR)/html... '
 	@doxygen $(DOXYFILE) > /dev/null 2>&1
-	@echo '** Doxygen docs created at $(DOC_DIR)/html'
+	@echo 'done.'
 
 # I probably should create a distclean as well but... too lazy right now.
 clean:
 	$(MAKE) -C lib clean
-	$(MAKE) -C test clean 
+	$(MAKE) -C test clean
+	@echo -n '** Deleting directory $(BIN_DIR)... '
 	@if [ -d $(BIN_DIR) ]; then $(RM) $(BIN_DIR); fi
-	@echo '** Deleted bin directory: $(BIN_DIR)'
+	@echo 'done.'
+	@echo -n '** Deleting directory $(DOC_DIR)... '
 	@if [ -d $(DOC_DIR)/html ]; then $(RM) $(DOC_DIR)/html; fi
-	@echo '** Deleted doc directory: $(DOC_DIR)/html'
+	@echo 'done.'

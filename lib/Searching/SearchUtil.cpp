@@ -42,3 +42,8 @@ int Test::what()
 {
     return 7;
 }
+
+void searchUtil::printSomeShit()
+{
+    std::cout << "New print function" << std::endl;
+}

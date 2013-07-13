@@ -39,6 +39,8 @@ namespace searchUtil
             int what();
     };
 
+    void printSomeShit();
+
 } // namespace searchUtil
 
 #endif // SEARCH_UTIL_H

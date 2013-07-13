@@ -24,16 +24,9 @@ using namespace std;
 
 int main()
 {
-    int a = 10;
-    int b = 20;
-
-    bool result = false;
-
     SU::Test* test = new SU::Test();
 
-    //result = SU::greaterThan(a,b);
-    
-    cout << "Greater than? " << (result ? "Yes":"No") << endl;
+    SU::printSomeShit();
 
     return 0;
 };

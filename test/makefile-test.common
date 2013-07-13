@@ -16,14 +16,14 @@ include $(abspath ../../makefile.common)
 
 default: $(PROG)
 
-OBJS = $(SRCS:.cpp=.o)
-
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+OBJS = $(SRCS:%.cpp=%.o)
 
 $(PROG): $(OBJS)
 	$(CXX) $(LDFLAGS) $(OBJS) $(LIBS) -o $(PROG)
 	@cp $(PROG) $(BIN_DIR)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
 	$(RM) $(PROG) $(OBJS) $(GLOBAL_REMOVES)
