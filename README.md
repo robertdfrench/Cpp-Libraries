@@ -13,10 +13,15 @@ I am most interested in some of the more advanced tree structures and graph sear
 Dependencies
 ------------
 
-Boost, installs in /usr/include:
+The commands to install these dependencies are for Debian-derived systems. However, you should be able to get them using any ol' package manager.
+
+Boost - installs in /usr/include:
 
     $ sudo apt-get install libboost-dev
 
+Google Test/Mock:
+
+    $ sudo apt-get install libgtest-dev
 
 License
 -----------
