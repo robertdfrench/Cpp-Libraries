@@ -14,5 +14,7 @@ Dependencies
 ------------
 
 Boost:
+
     Ubunutu, will install in /usr/include:
-    `$ sudo apt-get install libboost-dev`
+
+    $ sudo apt-get install libboost-dev
