@@ -13,8 +13,11 @@ I am most interested in some of the more advanced tree structures and graph sear
 Dependencies
 ------------
 
-Boost:
-
-    Ubunutu, will install in /usr/include:
+Boost, installs in /usr/include:
 
     $ sudo apt-get install libboost-dev
+
+
+License
+-----------
+This project is released under the [MIT License](http://opensource.org/licenses/MIT). See the LICENSE file for more information.
