@@ -1,14 +1,14 @@
 Cpp-Libraries
 ===================
 
-C++ Libraries for Sorting, Searching, & Data Structures.
+C++ Libraries for an assortment of differents things including but not limited to: Data Strauctures, Searching & Sorting Algorithms, and Math & String Utilities. 
 
 Why
 -------
 
-This is a set of C++ libraries used as a test bed to create new and interesting implementations for standard and non-standard data structures and sorting & searching algorithms. Many people have asked me why I created this since there is a wealth of highly tuned libraries already available in C++ through STL and Boost. My answer to that is simple: to learn. I feel it extremely neccessary for a Software Engineer to understand the underlying mechanics of the devices and constructs that he/she uses. Being able to 100% explain the space/time complexity trade-off of using a tail pointer for a linked list is important to me. And the best way to learn this in software is to implement it. So, that is what I am doing!
+This is a set of C++ libraries used as a test bed to create new and interesting implementations for standard and non-standard data structures, sorting & searching algorithms, and math utilties (among other things). Many people have asked me why I created this since there is a wealth of highly tuned libraries already available in C++ through STL, Boost, the GSL. My answer to that is simple: to learn. I feel it extremely neccessary for a Software Engineer to understand the underlying mechanics of the devices and constructs that he/she uses. Being able to 100% explain the space/time complexity trade-off of performing matrix multiplication on sparse and non-sparse data is important to me. And the best way to learn this in software is to implement it. So, that is what I am doing!
 
-I am most interested in some of the more advanced tree structures and graph searching algorithms so those are probably going to get more attention than more basic DXs like lists.
+I am most interested in some of the more advanced tree structures, graph searching algorithms, and mathematical utilities for matrices so those are probably going to get more attention than more basic constructs like lists and sorting.
 
 Dependencies
 ------------
@@ -31,7 +31,7 @@ Once that is complete, get the GTest src (puts in /usr/src):
 
     $ sudo apt-get install libgtest-dev
 
-Now we need to go to the src directory, creates the libs, and move then to lib dir:
+Now we need to go to the src directory, create the libs, and move them to the lib directory:
 
     $ cd /usr/src/gtest
     $ sudo cmake CMakeLists.txt
