@@ -42,6 +42,14 @@ Now we need to go to the src directory, create the libs, and move them to the li
 
     $ sudo apt-get install google-mock
 
+Install
+-----------
+The easiest way to get the source is by cloning this git repo:
+
+    $ git clone git@github.com:calebwherry/Cpp-Libraries.git
+    $ cd Cpp-Libraries
+    $ make
+
 License
 -----------
 This project is released under the [MIT License](http://opensource.org/licenses/MIT). See the LICENSE file for more information.
