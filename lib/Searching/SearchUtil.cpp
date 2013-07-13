@@ -15,8 +15,7 @@
 #include "SearchUtil.h"
 
 // Compiler Include Dependencies:
-#include <string>
-#include <iostream>
+//
 
 // Forward Declared Dependencies:
 //
@@ -25,28 +24,9 @@
 namespace searchUtil
 {
 
-    Test::Test()
+    bool exists()
     {
-        std::cout << "WHaaaat" << std::endl;
-    }
-
-    // Test function
-    bool Test::greaterThan(int a, int b)
-    {
-        if (a > b)
-            return true;
-        else
-            return false;
-    }
-
-    int Test::what()
-    {
-        return 7;
-    }
-
-    void printSomeShit()
-    {
-        std::cout << "New print function" << std::endl;
+        return true;
     }
 
 } // namespace searchUtil

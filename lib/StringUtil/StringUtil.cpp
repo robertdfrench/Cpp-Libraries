@@ -1,35 +1,33 @@
 /////////////////////////////
 //
 //  File:
-//     SearchUtil.h
+//     StringUtil.cpp
 //
 //  Description:
-//      Search Utilities: Header
+//      String Utilities: Impl
 //
 //  Author:
 //      J. Caleb Wherry
 //
 /////////////////////////////
 
-// Include Guard:
-#ifndef SEARCH_UTIL_H
-#define SEARCH_UTIL_H
-
 // Local Include Dependencies:
-//
+#include "StringUtil.h"
 
 // Compiler Include Dependencies:
-//
+#include <string>
+#include <iostream>
 
 // Forward Declared Dependencies:
 //
 
-/// searchUtil Namespace
-namespace searchUtil
+// Namespaces:
+namespace stringUtil
 {
 
-    bool exists();
+    int length(const std::string& inStr)
+    {
+        return inStr.length();
+    }
 
 } // namespace searchUtil
-
-#endif // SEARCH_UTIL_H

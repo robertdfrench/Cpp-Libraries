@@ -12,21 +12,19 @@
 /////////////////////////////
 
 // Compiler Includes:
-#include <iostream>
-#include <string>
+//
 
 // Local Includes:
 #include "SearchUtil.h"
 
+// Test Includes:
+#include <gtest/gtest.h>
+
 // Namespaces:
 namespace SU = searchUtil;
-using namespace std;
+using namespace SU;
 
-int main()
+TEST(SimpleTest, Exists)
 {
-    SU::Test* test = new SU::Test();
-
-    SU::printSomeShit();
-
-    return 0;
-};
+    ASSERT_TRUE(exists());
+}

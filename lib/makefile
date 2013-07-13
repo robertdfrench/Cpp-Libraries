@@ -12,7 +12,8 @@
 #############################
 
 all:
-	${MAKE} -C Searching
+	$(MAKE) -C Searching
+	$(MAKE) -C StringUtil
 #	$(MAKE) -C Sorting	**TEMPLATED HEADERS**
 #	$(MAKE) -C DataStructures   **TEMPLATED HEADERS**
 
@@ -20,5 +21,6 @@ all:
 
 clean:
 	$(MAKE) -C Searching clean
+	$(MAKE) -C StringUtil clean
 #	$(MAKE) -C Sorting clean	**TEMPLATED HEADERS**
 #	$(MAKE) -C DataStructures clean **TEMPLATED HEADERS**
