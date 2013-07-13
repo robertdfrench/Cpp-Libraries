@@ -23,6 +23,7 @@ default: $(LIB)
 
 $(LIB): $(OBJS)
 	$(AR) $(ARFLAGS) $(LIB) $(OBJS)
+	@mv $(LIB) $(BIN_DIR)
 
 clean:
 	$(RM) $(OBJS) $(LIB) $(GLOBAL_REMOVES)
