@@ -79,6 +79,7 @@ CD into the new directory and run make:
 
     $ cd Cpp-Libraries
     $ make
+    $ make install
 
 ## License
 This project is released under the [MIT License](http://opensource.org/licenses/MIT). See the LICENSE file for more information.
