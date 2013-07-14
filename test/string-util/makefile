@@ -12,8 +12,8 @@
 #############################
 
 ROOT = $(abspath ../..)
-PROG = string-util-tests
-SRCS = string-util-tests.cpp
+SRCS = $(wildcard *.cpp)
+PROGS = $(SRCS:%.cpp=%)
 INCLUDES += -I$(ROOT)/lib/StringUtil
 LIBS += -L$(ROOT)/lib/StringUtil -lstringUtil
 

@@ -57,7 +57,7 @@ LIBS += -L/usr/local/lib
 RM := /bin/rm -Rf
 
 # Global objects to remove:
-GLOBAL_REMOVES := Makefile.bak makefile.bak .depend *~
+GLOBAL_REMOVES := Makefile.bak makefile.bak *~
 
 # Doxyfile:
 DOXYFILE := $(DOC_DIR)/Doxyfile

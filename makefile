@@ -15,7 +15,7 @@
 include makefile.common
 
 # Phony targets:
-.PHONY: default lib depend test run-test doc clean
+.PHONY: default lib test run-test doc install clean
 
 # Default rule:
 default: lib test doc
@@ -38,6 +38,14 @@ run-test:
 doc:
 	@echo -n '** Creating Doxygen docs at $(DOC_DIR)/html... '
 	@doxygen $(DOXYFILE) > /dev/null 2>&1
+	@echo 'done.'
+
+# Install libraries:
+install:
+	@echo -n '** Installing libraries... '
+	@for lib in `find $(BIN_DIR) -type f -name *.a`; do \
+		cp $$lib /usr/local/lib; \
+	done
 	@echo 'done.'
 
 # I probably should create a distclean as well but... too lazy right now.

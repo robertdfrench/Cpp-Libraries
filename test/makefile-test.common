@@ -14,18 +14,18 @@
 # Double directoy up because this path is expanded when it is included (which is a directory down):
 include $(abspath ../../makefile.common)
 
-default: $(PROG)
+default: $(PROGS)
 
 LIBS += -lpthread -lgtest -lgtest_main
 
 OBJS = $(SRCS:%.cpp=%.o)
 
-$(PROG): $(OBJS)
-	$(CXX) $(LDFLAGS) $(OBJS) $(LIBS) -o $(PROG)
-	@cp $(PROG) $(BIN_DIR)
+$(PROGS): $(OBJS)
+	$(CXX) $(LDFLAGS) $< $(LIBS) -o $@
+	@mv $@ $(BIN_DIR)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	$(RM) $(PROG) $(OBJS) $(GLOBAL_REMOVES)
+	$(RM) $(PROGS) $(OBJS) $(GLOBAL_REMOVES)
