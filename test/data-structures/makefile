@@ -12,8 +12,8 @@
 #############################
 
 ROOT = $(abspath ../..)
-PROG = data-structure-tests
-SRCS = data-structure-tests.cpp
+SRCS = $(wildcard *.cpp)
+PROGS = $(SRCS:%.cpp=%)
 INCLUDES += -I${ROOT}/lib/DataStructures
 LIBS +=
 

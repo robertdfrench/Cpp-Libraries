@@ -15,7 +15,7 @@
 include makefile.common
 
 # Phony targets:
-.PHONY: default lib depend test run-test doc install clean
+.PHONY: default lib test run-test doc install clean
 
 # Default rule:
 default: lib test doc

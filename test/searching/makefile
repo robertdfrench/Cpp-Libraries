@@ -12,8 +12,8 @@
 #############################
 
 ROOT = $(abspath ../..)
-PROG = searching-tests
-SRCS = searching-tests.cpp
+SRCS = $(wildcard *.cpp)
+PROGS = $(SRCS:%.cpp=%)
 INCLUDES += -I$(ROOT)/lib/Searching
 LIBS += -L$(ROOT)/lib/Searching -lsearching
 

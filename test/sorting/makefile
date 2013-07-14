@@ -12,8 +12,8 @@
 #############################
 
 ROOT = $(abspath ../..)
-PROG = sorting-tests
-SRCS = sorting-tests.cpp
+SRCS = $(wildcard *.cpp)
+PROGS = $(SRCS:%.cpp=%)
 INCLUDES += -I${ROOT}/lib/Sorting
 LIBS +=
 
